@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lingo</title>
-    <link rel="stylesheet" href="lingo.css">
-    <link rel="shortcut icon" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-favicon.ico?v=v221122150">
-</head>
-<body>
+    <link rel="stylesheet" href="lingo.css" />
+    <link rel="shortcut icon" href="/data/favicon.ico" />
+    <script type="text/javascript" src="lingo.js" defer></script>
+  </head>
+  <body>
     <!-- Lingo -->
-    <h1 style="position: absolute; top: 0; color: #181818;">TOMMY LINGO</h1>
+    <h1 style="position: absolute; top: 0; color: #181818">TOMMY LINGO</h1>
     <div class="container">
-        <div id="message"></div>
-        <table>
-        <tbody>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-            <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
-        </tbody>
-        </table>
-        <div id="time-bar"><div id="progress"></div></div>
-        <button id="new-game" onclick="newGame()">New Game</button>
+      <div id="message"></div>
+      <div class="grid">
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+
+      <div id="time-bar"><div id="progress"></div></div>
+      <div class="controls">
+        <input  type="button" id="new-game" class="control" onclick="newGame()" value="New Game">
+        <div class="time-container control">
+          <input id="time" type="number" value="10" max="999" placeholder="Set Seconds" />
+          <span>seconds</span>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="lingo.js"></script>
+  </body>
 </html>
